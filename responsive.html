@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tableau périodique</title>
+
+  <style>
+    body{
+      background: linear-gradient(90deg, rgb(32, 32, 32), rgb(49, 49, 49));
+    }
+
+    table{
+      empty-cells: hide;
+      width: 100%
+    }
+
+    tr{
+      display: flex;
+      justify-content: space-between;
+    }
+
+    th{
+      max-width: 70px;
+      height: 70px;
+      margin: 2px;
+      width: 100%;
+    }
+
+    td{
+      max-width: 70px;
+      height: 70px;
+      
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid white;
+      border-radius: 5px;
+      margin: 1px;
+      font-size: 2vw;
+      font-weight: bold;
+      position: relative;
+      color: white;
+    }
+
+    .annex{
+      margin-top: 20px;
+    }
+
+    span{
+      font-size: 16px;
+      font-weight: 100;
+      position: absolute;
+      color: white;
+    }
+
+    .number{
+      bottom: 0;
+      left: 5px;
+    }
+
+    .weight{
+      top: 0;
+      right: 5px;
+    }
+
+    .noble-gas{
+      background: linear-gradient(90deg, rgba(48, 62, 143, 1), rgba(47, 150, 163, 1));    }
+
+    .lanthanide{
+      background: linear-gradient(90deg, rgba(165, 13, 13, 0.884), rgba(230, 26, 87, 0.952));
+    }
+
+    .actinide{
+      background: linear-gradient(90deg, rgba(211, 44, 147, 0.884), rgba(236, 97, 97, 0.952));
+    }
+
+    .metal{
+      background: linear-gradient(90deg, rgba(16, 138, 107, 0.664), rgba(38, 221, 21, 0.808));
+    }
+
+    .metalloid{
+      background: linear-gradient(90deg, rgba(14, 233, 69, 0.788), rgba(193, 230, 26, 0.952));
+    }
+
+    .halogen{
+      background: linear-gradient(90deg, rgba(13, 199, 255, 0.774), rgba(27, 240, 255, 0.945));
+    }
+
+    .non-metal{
+      background: linear-gradient(90deg, rgb(122, 122, 122), rgb(187, 187, 187));
+    }
+
+    .alkali-metal{
+      background: linear-gradient(90deg, rgb(243, 118, 17), rgb(255, 166, 94));
+    }
+
+    .alkaline-earth-metal{
+      background: linear-gradient(90deg, rgba(255, 179, 15, 0.89), rgb(253, 195, 70));
+    }
+
+    .transition-metal{
+      background: linear-gradient(90deg, rgb(153, 19, 243), rgb(194, 57, 171));
+    }
+
+    .container{
+      position: relative;
+      max-width: 1372px;
+      width: 100%;
+      margin-left: 50%;
+      transform: translate(-50%);
+      padding-top: 20px;
+    }
+
+    img{
+      position: absolute;
+      left: 550px;
+      top: 0;
+      opacity: 0.8;
+    }
+
+    @media screen and (max-width: 1400px){
+      img{
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="../mendeleieve.png" alt="mendeleieve">
+
+    <table>
+      <tr>
+        <td class="non-metal">H <span class="number">1</span> <span class="weight">1</span></td>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <td class="noble-gas">He <span class="number">2</span> <span class="weight">4</span></td>
+      </tr>
+  
+      <tr>
+        <td class="alkali-metal">Li <span class="number">3</span> <span class="weight">7</span></td>
+        <td class="alkaline-earth-metal">Be <span class="number">4</span> <span class="weight">9</span></td>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <td class="metalloid">B <span class="number">5</span> <span class="weight">11</span></td>
+        <td class="non-metal">C <span class="number">6</span> <span class="weight">12</span></td>
+        <td class="non-metal">N <span class="number">7</span> <span class="weight">14</span></td>
+        <td class="non-metal">O <span class="number">8</span> <span class="weight">16</span></td>
+        <td class="halogen">F <span class="number">9</span> <span class="weight">19</span></td>
+        <td class="noble-gas">Ne <span class="number">10</span> <span class="weight">20</span></td>
+      </tr>
+  
+      <tr>
+          <td class="alkali-metal">Na <span class="number">11</span> <span class="weight">23</span></td>
+          <td class="alkaline-earth-metal">Mg <span class="number">12</span> <span class="weight">24</span></td>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <td class="metal">Al <span class="number">13</span> <span class="weight">27</span></td>
+          <td class="metalloid">Si <span class="number">14</span> <span class="weight">28</span></td>
+          <td class="non-metal">P <span class="number">15</span> <span class="weight">31</span></td>
+          <td class="non-metal">S <span class="number">16</span> <span class="weight">32</span></td>
+          <td class="halogen">Cl <span class="number">17</span> <span class="weight">35</span></td>
+          <td class="noble-gas">Ar <span class="number">18</span> <span class="weight">40</span></td>
+      </tr>
+  
+      <tr>
+        <td class="alkali-metal">K <span class="number">19</span> <span class="weight">39</span></td>
+        <td class="alkaline-earth-metal">Ca <span class="number">20</span> <span class="weight">40</span></td>
+        <td class="transition-metal">Sc <span class="number">21</span> <span class="weight">45</span></td>
+        <td class="transition-metal">Ti <span class="number">22</span> <span class="weight">48</span></td>
+        <td class="transition-metal">V <span class="number">23</span> <span class="weight">51</span></td>
+        <td class="transition-metal">Cr <span class="number">24</span> <span class="weight">52</span></td>
+        <td class="transition-metal">Mn <span class="number">25</span> <span class="weight">55</span></td>
+        <td class="transition-metal">Fe <span class="number">26</span> <span class="weight">56</span></td>
+        <td class="transition-metal">Co <span class="number">27</span> <span class="weight">59</span></td>
+        <td class="transition-metal">Ni <span class="number">28</span> <span class="weight">58</span></td>
+        <td class="transition-metal">Cu <span class="number">29</span> <span class="weight">63</span></td>
+        <td class="transition-metal">Zn <span class="number">30</span> <span class="weight">64</span></td>
+        <td class="metal">Ga <span class="number">31</span> <span class="weight">69</span></td>
+        <td class="metalloid">Ge <span class="number">32</span> <span class="weight">74</span></td>
+        <td class="metalloid">As <span class="number">33</span> <span class="weight">75</span></td>
+        <td class="non-metal">Se <span class="number">34</span> <span class="weight">80</span></td>
+        <td class="halogen">Br <span class="number">35</span> <span class="weight">79</span></td>
+        <td class="noble-gas">Kr <span class="number">36</span> <span class="weight">84</span></td>
+      </tr>
+  
+      <tr>
+        <td class="alkali-metal">Rb <span class="number">37</span> <span class="weight">85</span></td>
+        <td class="alkaline-earth-metal">Sr <span class="number">38</span> <span class="weight">88</span></td>
+        <td class="transition-metal">Y <span class="number">39</span> <span class="weight">89</span></td>
+        <td class="transition-metal">Zr <span class="number">40</span> <span class="weight">90</span></td>
+        <td class="transition-metal">Nb <span class="number">41</span> <span class="weight">93</span></td>
+        <td class="transition-metal">Mo <span class="number">42</span> <span class="weight">98</span></td>
+        <td class="transition-metal">Tc <span class="number">43</span> <span class="weight">98</span></td>
+        <td class="transition-metal">Ru <span class="number">44</span> <span class="weight">102</span></td>
+        <td class="transition-metal">Rh <span class="number">45</span> <span class="weight">103</span></td>
+        <td class="transition-metal">Pd <span class="number">46</span> <span class="weight">106</span></td>
+        <td class="transition-metal">Ag <span class="number">47</span> <span class="weight">107</span></td>
+        <td class="transition-metal">Cd <span class="number">48</span> <span class="weight">114</span></td>
+        <td class="metal">In <span class="number">49</span> <span class="weight">115</span></td>
+        <td class="metal">Sn <span class="number">50</span> <span class="weight">120</span></td>
+        <td class="metalloid">Sb <span class="number">51</span> <span class="weight">121</span></td>
+        <td class="metalloid">Te <span class="number">52</span> <span class="weight">130</span></td>
+        <td class="halogen">I <span class="number">53</span> <span class="weight">127</span></td>
+        <td class="noble-gas">Xe <span class="number">54</span> <span class="weight">129</span></td>
+      </tr>
+  
+      <tr>
+        <td class="alkali-metal">Cs <span class="number">55</span> <span class="weight">133</span></td>
+        <td class="alkaline-earth-metal">Ba <span class="number">56</span> <span class="weight">138</span></td>
+        <td class="lanthanide"><span>57-71</span></td>
+        <td class="transition-metal">Hf <span class="number">72</span> <span class="weight">180</span></td>
+        <td class="transition-metal">Ta <span class="number">73</span> <span class="weight">181</span></td>
+        <td class="transition-metal">W <span class="number">74</span> <span class="weight">184</span></td>
+        <td class="transition-metal">Re <span class="number">75</span> <span class="weight">187</span></td>
+        <td class="transition-metal">Os <span class="number">76</span> <span class="weight">192</span></td>
+        <td class="transition-metal">Ir <span class="number">77</span> <span class="weight">193</span></td>
+        <td class="transition-metal">Pt <span class="number">78</span> <span class="weight">195</span></td>
+        <td class="transition-metal">Au <span class="number">79</span> <span class="weight">197</span></td>
+        <td class="transition-metal">Hg <span class="number">80</span> <span class="weight">202</span></td>
+        <td class="metal">Tl <span class="number">81</span> <span class="weight">205</span></td>
+        <td class="metal">Pb <span class="number">82</span> <span class="weight">208</span></td>
+        <td class="metal">Bi <span class="number">83</span> <span class="weight">209</span></td>
+        <td class="metalloid">Po <span class="number">84</span> <span class="weight">210</span></td>
+        <td class="halogen">At <span class="number">85</span> <span class="weight">210</span></td>
+        <td class="noble-gas">Rn <span class="number">86</span> <span class="weight">222</span></td>
+      </tr>
+  
+      <tr>
+        <td class="alkali-metal">Fr <span class="number">87</span> <span class="weight">223</span></td>
+        <td class="alkaline-earth-metal">Ra <span class="number">88</span> <span class="weight">226</span></td>
+        <td class="actinide"><span>89-103</span></td>      
+        <td class="transition-metal">Rf <span class="number">104</span> <span class="weight">261</span></td>
+        <td class="transition-metal">Db <span class="number">105</span> <span class="weight">282</span></td>
+        <td class="transition-metal">Sg <span class="number">106</span> <span class="weight">283</span></td>
+        <td class="transition-metal">Bh <span class="number">107</span> <span class="weight">262</span></td>
+        <td class="transition-metal">Hs <span class="number">108</span> <span class="weight">265</span></td>
+        <td class="transition-metal">Mt <span class="number">109</span> <span class="weight">266</span></td>
+        <td class="transition-metal">Ds <span class="number">110</span> <span class="weight"></span></td>
+        <td class="transition-metal">Rg <span class="number">111</span> <span class="weight"></span></td>
+        <td class="transition-metal">Cn <span class="number">112</span> <span class="weight"></span></td>
+        <td class="metal">Uut <span class="number">113</span> <span class="weight"></span></td>
+        <td class="metal">Fi <span class="number">114</span> <span class="weight"></span></td>
+        <td class="metal">Uup <span class="number">115</span> <span class="weight"></span></td>
+        <td class="metal">Lv <span class="number">116</span> <span class="weight"></span></td>
+        <td class="halogen">Uus <span class="number">117</span> <span class="weight"></span></td>
+        <td class="noble-gas">Uuo <span class="number">118</span> <span class="weight"></span></td>
+      </tr>
+  
+      <tr class="annex">
+        <th></th>
+        <th></th>
+        <th></th>
+        <td class="lanthanide">La <span class="number">57</span> <span class="weight">139</span></td>
+        <td class="lanthanide">Ce <span class="number">58</span> <span class="weight">140</span></td>
+        <td class="lanthanide">Pr <span class="number">59</span> <span class="weight">141</span></td>
+        <td class="lanthanide">Nd <span class="number">60</span> <span class="weight">142</span></td>
+        <td class="lanthanide">Pm <span class="number">61</span> <span class="weight">146</span></td>
+        <td class="lanthanide">Sm <span class="number">62</span> <span class="weight">152</span></td>
+        <td class="lanthanide">Eu <span class="number">63</span> <span class="weight">153</span></td>
+        <td class="lanthanide">Gd <span class="number">64</span> <span class="weight">158</span></td>
+        <td class="lanthanide">Tb <span class="number">65</span> <span class="weight">159</span></td>
+        <td class="lanthanide">Dy <span class="number">66</span> <span class="weight">164</span></td>
+        <td class="lanthanide">Ho <span class="number">67</span> <span class="weight">165</span></td>
+        <td class="lanthanide">Er <span class="number">68</span> <span class="weight">166</span></td>
+        <td class="lanthanide">Tm <span class="number">69</span> <span class="weight">169</span></td>
+        <td class="lanthanide">Yb <span class="number">70</span> <span class="weight">174</span></td>
+        <td class="lanthanide">Lu <span class="number">71</span> <span class="weight">175</span></td>
+      </tr>
+  
+      <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <td class="actinide">Ac <span class="number">89</span> <span class="weight">227</span></td>
+        <td class="actinide">Th <span class="number">90</span> <span class="weight">232</span></td>
+        <td class="actinide">Pa <span class="number">91</span> <span class="weight">231</span></td>
+        <td class="actinide">U <span class="number">92</span> <span class="weight">238</span></td>
+        <td class="actinide">Np <span class="number">93</span> <span class="weight">237</span></td>
+        <td class="actinide">Pu <span class="number">94</span> <span class="weight">244</span></td>
+        <td class="actinide">Am <span class="number">95</span> <span class="weight">243</span></td>
+        <td class="actinide">Cm <span class="number">96</span> <span class="weight">247</span></td>
+        <td class="actinide">Bk <span class="number">97</span> <span class="weight">247</span></td>
+        <td class="actinide">Cf <span class="number">98</span> <span class="weight">249</span></td>
+        <td class="actinide">Es <span class="number">99</span> <span class="weight">254</span></td>
+        <td class="actinide">Fm <span class="number">100</span> <span class="weight">253</span></td>
+        <td class="actinide">Md <span class="number">101</span> <span class="weight">256</span></td>
+        <td class="actinide">No <span class="number">102</span> <span class="weight">254</span></td>
+        <td class="actinide">Lr <span class="number">103</span> <span class="weight">257</span></td>
+      </tr>
+    </table>
+  </div>
+  
+</body>
+</html>
